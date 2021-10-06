@@ -17,7 +17,7 @@ def my_friend_house
 end
 
 # p my_house
-
+apples = 1
 # instance variable
 @bananas = 0
 
@@ -57,6 +57,3 @@ whats_in_scope(dad)
 
 
 	
-
-
-

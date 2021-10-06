@@ -1,4 +1,4 @@
-# - If we assign sum=(x+y, and the re-assign x or y, `sum` does not change,
+# - If we assign sum=(x+y), and then re-assign x or y, `sum` does not change,
 #   because variables hold objects, not expressions.
 # - Expressions are chunks of code that Ruby evaluates, 
 #   they include objects, and evaluate to an objects.
@@ -60,7 +60,3 @@ p first_name + last_name
 p full_name
 
 # Value -> Object
-
-
-
-

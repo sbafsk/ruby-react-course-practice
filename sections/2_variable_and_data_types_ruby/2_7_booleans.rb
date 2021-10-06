@@ -1,4 +1,4 @@
-# - We yse true to represent a positive state (true/yes/on) and false to represent a negative state (false/no/off).
+# - We use true to represent a positive state (true/yes/on) and false to represent a negative state (false/no/off).
 #   There is also nil, which represents an empty state.
 # - We also see boolean values as the return values of comparison operators (==,!=,>,<,>=,<=)
 

@@ -1,9 +1,9 @@
 # - Binary Mathematical operatos are actually methods called on the first number,
 #   which take the second number as an argument. (the same goes for when we use them with Strings)
 # - The print commands(p, puts, print) are actually methods that belong to the Kernel object (module)
-    and can be called from anywhere.
+#    and can be called from anywhere.
 # - We omit parentheses after a method call when there is no argument, 
-    or with commonly used methods like the print methods.
+#   or with commonly used methods like the print methods.
 
 # --- 
 
@@ -48,18 +48,3 @@ Kernel.puts("called with receiver")
 
 return_value = p 3 # return the object
 return_value_puts = puts 3 # return nil
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

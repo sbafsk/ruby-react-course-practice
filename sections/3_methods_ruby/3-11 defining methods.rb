@@ -18,6 +18,7 @@ def say_hello
 	puts "hello" # returns Nil
 end
 
+
 # refer to the method w/o calling it.
 :say_hello
 # say_hello
@@ -74,4 +75,3 @@ p exit_early
 # Object-Oriented vs Functional
 # Ruby is loop# but by defining methods at the top level,
 # we can simulate fuctional programming.
-
