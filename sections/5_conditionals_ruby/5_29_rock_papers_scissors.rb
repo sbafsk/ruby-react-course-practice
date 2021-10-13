@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - This was mainly an exercise in refactoring, where we have code
 #   that works, but we want to make it easier to read and maintain.
 # - We saw that we can clean up our if statement by using nested
@@ -9,7 +11,7 @@
 #   outcomes.
 
 # ---
-moves = ['rock', 'paper', 'scissors']
+moves = %w[rock paper scissors]
 
 # get player move
 print "pick your move \n"
@@ -28,30 +30,30 @@ puts "computer played #{c_move}"
 if p_move == c_move
   puts "It's a tie"
 # user wins
-elsif (p_move == 'rock' && c_move == 'scissors') || 
-  (p_move == 'paper' && c_move == 'rock') ||
-  (p_move == 'scissors' && c_move == 'paper')
-    puts "user wins"
+elsif (p_move == 'rock' && c_move == 'scissors') ||
+      (p_move == 'paper' && c_move == 'rock') ||
+      (p_move == 'scissors' && c_move == 'paper')
+  puts 'user wins'
 # computer wins
 elsif (p_move == 'rock' && c_move == 'paper') ||
-  (p_move == 'paper' && c_move == 'scissors') ||
-  (p_move == 'scissors' && c_move == 'rock')
-    puts "computer wins"
+      (p_move == 'paper' && c_move == 'scissors') ||
+      (p_move == 'scissors' && c_move == 'rock')
+  puts 'computer wins'
 # unexpected input
 else
-  puts "unexpected input"
+  puts 'unexpected input'
 end
 
 win_scenarios = [
-  ['rock', 'scissors'],
-  ['paper', 'rock'],
-  ['scissors', 'paper']
+  %w[rock scissors],
+  %w[paper rock],
+  %w[scissors paper]
 ]
 
 lose_scenarios = [
-  ['scissors', 'rock'],
-  ['rock', 'paper'],
-  ['paper', 'scissors']
+  %w[scissors rock],
+  %w[rock paper],
+  %w[paper scissors]
 ]
 
 this_game = [p_move, c_move]
@@ -59,9 +61,9 @@ this_game = [p_move, c_move]
 if p_move == c_move
   puts "it's a tie"
 elsif win_scenarios.include?(this_game)
-  puts "user wins"
+  puts 'user wins'
 elsif lose_scenarios.include?(this_game)
-  puts "computer wins"
+  puts 'computer wins'
 else
-  puts "unexpected input"
+  puts 'unexpected input'
 end

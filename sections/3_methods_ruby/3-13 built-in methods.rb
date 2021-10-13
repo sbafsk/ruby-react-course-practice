@@ -1,4 +1,6 @@
-# - We can have an object list its methods for us 
+# frozen_string_literal: true
+
+# - We can have an object list its methods for us
 #   by calling #methods (object.methods).
 # - We have the #to_<something> methods that convert/coerce
 #   objects to a particular type to prevent type errors.
@@ -7,10 +9,10 @@
 
 # ---
 
-vigilante = "batman"
+vigilante = 'batman'
 
-"batman".reverse
-"batman".upcase
+'batman'.reverse
+'batman'.upcase
 
 # Ask an object to list its methods
 # puts vigilante.methods.sort
@@ -25,11 +27,11 @@ vigilante = "batman"
 # to_<something>
 
 p 3.to_s # to string
-p "3".to_i # to integer
-p "3".to_f # to float
+p '3'.to_i # to integer
+p '3'.to_f # to float
 
-p "120 bananas".to_i # return the number found
-p "There are four lights".to_i # return 0
+p '120 bananas'.to_i # return the number found
+p 'There are four lights'.to_i # return 0
 
 # print "x = "
 # x = gets.chomp
@@ -39,7 +41,7 @@ p "There are four lights".to_i # return 0
 # Type Errors can be fixed with to_i to_f to_s etc.
 
 # ! Dangerous methods
-# If you see method_name! then there's 
+# If you see method_name! then there's
 # a safe version: method_name
 
 p vigilante
@@ -54,12 +56,12 @@ puts "let's look the original string: #{vigilante}"
 
 # Booleans methods returns True or False
 
-#p.vigilante == nil
+# p.vigilante == nil
 p vigilante.nil? # if vigilante != nil # false
 
 p nil.nil? # true
 
-p vigilante.include?("B")
-p vigilante.include?("b")
+p vigilante.include?('B')
+p vigilante.include?('b')
 
 p vigilante.empty?

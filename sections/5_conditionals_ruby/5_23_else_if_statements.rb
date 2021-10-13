@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - We can next conditionals, but it's better to add another
 #   branch to a conditional with `elsif`
 # - We can add as many elsifs as we want to handle open-ended
@@ -19,37 +21,36 @@ x = rand(100)
 y = rand(100)
 
 # Nested conditionals
-if x > y 
-  puts "#{x} is greater than #{y}"
-else
-  if x == y
-    puts "#{x} is equal to #{y}"
-  else
-    puts "#{x} is less than #{y}"  
-  end
-end
-
-# if-else-if elsif
-
-if x > y 
+if x > y
   puts "#{x} is greater than #{y}"
 elsif x == y
   puts "#{x} is equal to #{y}"
 else
-  puts "#{x} is less than #{y}"    
+  puts "#{x} is less than #{y}"
+end
+
+# if-else-if elsif
+
+if x > y
+  puts "#{x} is greater than #{y}"
+elsif x == y
+  puts "#{x} is equal to #{y}"
+else
+  puts "#{x} is less than #{y}"
 end
 
 # Let's call the whole thing off
-print "You say "
+print 'You say '
 you_say = gets.chomp
 
-print "I say "
+print 'I say '
 
-if you_say == "potato"
-  puts "potahto."
-elsif you_say == "tomato"
-  puts "tomahto."
-else 
+case you_say
+when 'potato'
+  puts 'potahto.'
+when 'tomato'
+  puts 'tomahto.'
+else
   # Expect the unexpected
   puts "let's call the whole thing off."
   # puts "Invalid input"
@@ -57,4 +58,4 @@ else
 end
 
 hash = {}
-hash.default = "Not found."
+hash.default = 'Not found.'

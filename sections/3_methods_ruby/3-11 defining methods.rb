@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # - We learned to define a method using the def and end keywords,
 #   with or without arguments.
 # - We learned about explicit and implicit returns,
 #   and how we can use an explicit return to exit a method early.
 #   Anthing a method does aside from returning a value is called a side effect.
-# - I touched on functions, which Ruby doesn't have, 
+# - I touched on functions, which Ruby doesn't have,
 #   but which we can simulate by defining methods on `main`
 
 # ---
@@ -15,22 +17,21 @@
 # keywords are reserverd (can't use them as variable or method names)
 
 def say_hello
-	puts "hello" # returns Nil
+  puts 'hello' # returns Nil
 end
-
 
 # refer to the method w/o calling it.
 :say_hello
 # say_hello
 
 def greet(name)
-	puts "Hello, #{name}!"
+  puts "Hello, #{name}!"
 end
 
 # greet("David")
 
 def sum(x, y)
-	return x + y
+  x + y
 end
 
 # sum(3,4)
@@ -39,7 +40,7 @@ end
 
 # implicit return : return the (result of evaluating the) last expression
 def product(x, y)
-	x * y
+  x * y
 end
 
 puts product(12, 6)
@@ -49,8 +50,8 @@ product_of_12_22 = product(12, 22)
 
 # early return
 def exit_early
-	return "La La La"
-	puts "This string never prints"
+  return 'La La La'
+  puts 'This string never prints'
 end
 
 p exit_early

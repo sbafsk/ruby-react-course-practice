@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - The Logical OR is inclusive, which means `(p||q)` is true when
 #   both sides of the expression are true.
 # - We looked at examples of situations where someone get
@@ -25,14 +27,14 @@
 has_a_dog = false
 has_a_cat = true
 
-#puts "do you have to pay the deposit"
+# puts "do you have to pay the deposit"
 pet_deposit = (has_a_dog || has_a_cat)
-#p pet_deposit
+# p pet_deposit
 
-puts "Welcome to the museum."
-puts "If you are a studen or a senior, you may pay a discounted rate."
+puts 'Welcome to the museum.'
+puts 'If you are a studen or a senior, you may pay a discounted rate.'
 
-puts "do you have student_id?"
+puts 'do you have student_id?'
 
 input = gets.chomp
 # if input == "yes"
@@ -40,18 +42,17 @@ input = gets.chomp
 # else
 #   student = false
 # end
-student = input == "yes"
+student = input == 'yes'
 
-
-puts "How old are you?"
+puts 'How old are you?'
 age = gets.chomp.to_i
 senior = age >= 65
 
-puts "Do you get the discount..."
+puts 'Do you get the discount...'
 
 discount = (student || senior)
 
 # puts "YES!" if discount
 # puts "NO!" if !discount
 
-puts (discount ? "YES!" : "NO")
+puts(discount ? 'YES!' : 'NO')

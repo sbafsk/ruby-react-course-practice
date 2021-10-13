@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ComputerPlayer < Player
   def get_move
-    @move  = [:rock, :paper, :scissors].sample    
+    @move = %i[rock paper scissors].sample
   end
 end

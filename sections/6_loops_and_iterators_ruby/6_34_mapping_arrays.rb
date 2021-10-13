@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # - The #map method takes a block, and applies that block to each
 #   member of a collection in turn, whateve value comes back goes
 #   in the corresponding place in the new array to be returned.
 # - We saw how we can do the same thing using #each, but that
 #   #map is nicer.
-# - As we saw at the end, we can use #map! to change an array 
+# - As we saw at the end, we can use #map! to change an array
 #   'in place', but we can only call it on an array, because Ruby doesn't
 #   let us foce another type of objects (e.g a range) to change type.
 
@@ -24,7 +26,7 @@ bad_guys = [
 opinion_about_bad_guys = []
 
 # Mapping an array to a new array
-# keep the original array the same 
+# keep the original array the same
 # have a new array, where each element correspons
 # to somethign in the old array
 

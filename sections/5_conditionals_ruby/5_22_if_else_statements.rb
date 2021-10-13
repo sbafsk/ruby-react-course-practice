@@ -1,4 +1,6 @@
-# - We saw how to use an if-else statement to make a 
+# frozen_string_literal: true
+
+# - We saw how to use an if-else statement to make a
 #   binary decision, that is, where there are options.
 # - We looked at the syntax of an if-else statement
 #   (the `if`, `else`, and `end` keywords).
@@ -19,22 +21,21 @@ false
 
 condition = true
 
-puts "im outside the conditional"
+puts 'im outside the conditional'
 if condition
-  puts "it was true"  
+  puts 'it was true'
 else
-  puts "it was false"  
+  puts 'it was false'
 end
-puts "im back outside"
+puts 'im back outside'
 
 it_is_raining = true
 
 if it_is_raining
-  puts "bring umbrella"  
+  puts 'bring umbrella'
 else
-  puts "use shorts"  
+  puts 'use shorts'
 end
-
 
 # Railway tracks
 #         //=========
@@ -44,18 +45,18 @@ end
 railway_switch = true
 
 if railway_switch
-  puts "train goes left"
+  puts 'train goes left'
 else
-  puts "train goes right"
+  puts 'train goes right'
 end
 
-puts "pick a number"
+puts 'pick a number'
 input = gets.chomp.to_i
 
 magic_number = 7
 
 if input > magic_number
-  puts "Your number is greater than the magic number"
-else 
-  puts "Your number is less than or equal the magic number"
+  puts 'Your number is greater than the magic number'
+else
+  puts 'Your number is less than or equal the magic number'
 end

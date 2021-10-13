@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - Showed how to get random numbers with the Kernel method
 #   #rand(max) and array#sample
 # - Reviewed the difference between #shuffle (returns a copy)
@@ -19,17 +21,17 @@
 # (lottery style)
 
 def shuffle_and_pop(array)
-  array.shuffle!.pop  # use `!` to mutate the array
+  array.shuffle!.pop # use `!` to mutate the array
 end
 
-players = ["Duncan", "Kevan", "Tara", "Bobby", "Jane"]
+players = %w[Duncan Kevan Tara Bobby Jane]
 # winner = players[rand(players.length)] # 0 < x < 5
 # vvv does the same as ^^^
 winner = players.sample
 
 # puts "And the winner is ... #{winner}!"
 
-# players = { 
+# players = {
 #   3 => "Duncan",
 #   5 => "Kevan",
 #   8 => "Tara",
@@ -53,7 +55,7 @@ runner_up = shuffle_and_pop(players)
 
 puts "And the runner up prize goes to ... #{runner_up}!"
 
-p players 
+p players
 
 # Refactoring
 # - replace magic numbers with well name variables

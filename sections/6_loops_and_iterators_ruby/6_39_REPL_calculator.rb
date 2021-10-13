@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 # - We saw that we've had a REPL (Read Evaluate Print Loop)
 #   available to us all long.
-# - We saw how we can use `while true` or `loop` to create an 
-#   infinite loop, and use the `break` keyword to get out 
+# - We saw how we can use `while true` or `loop` to create an
+#   infinite loop, and use the `break` keyword to get out
 #   of the loop when we want.
 # - We reviewed methods for parcing user input, and we saw how we
 #   can create a specific syntax/grammar for the user to give
@@ -11,7 +13,7 @@
 
 # REPL Calculator
 
-# Calculator: 
+# Calculator:
 # add
 # subtract
 # multiply
@@ -37,7 +39,6 @@
 # multiply
 # substract
 
-
 def calculator
   loop do # same as `while true do`
     print '>'
@@ -45,64 +46,64 @@ def calculator
     # p input
     command = input[0].downcase
     # arg1 = input[1].to_f
-    # arg2 = input[2].to_f 
+    # arg2 = input[2].to_f
     # parallel assignment
-    # arg1, arg2 = input[1].to_f, input[2].to_f 
-    arg1, arg2 = input[1, 2].map! { |n| n.to_f}
-    
-    #p command, arg1, arg2
+    # arg1, arg2 = input[1].to_f, input[2].to_f
+    arg1, arg2 = input[1, 2].map!(&:to_f)
+
+    # p command, arg1, arg2
     case command
-    when "q"
+    when 'q'
       break
-    when "add", "sum", "plus"
+    when 'add', 'sum', 'plus'
       puts arg1 + arg2
-    when "multiply", "product", "*", "times"
+    when 'multiply', 'product', '*', 'times'
       puts arg1 * arg2
-    when "substract", "minus", "difference", "-"
+    when 'substract', 'minus', 'difference', '-'
       puts arg1 - arg2
-    when "divide", "/"
+    when 'divide', '/'
       puts arg1 / arg2
-    else 
+    else
       puts "I don't understand that."
     end
-    puts 
+    puts
   end
-  puts "goodbye"
+  puts 'goodbye'
 end
 
 # calculator
 
 # Exercise
-# Rewrite calculator to take 
+# Rewrite calculator to take
 
 def calculator_v2
   loop do # same as `while true do`
     print '>'
-    input = gets.chomp.split(' ') 
-      
+    input = gets.chomp.split(' ')
+
     command = input[1].downcase
     # arg1, arg2 = input[0..-1].map! { |n| n.to_f}
     arg1 = input[0].to_f
     arg2 = input[2].to_f
-    
+
     puts command, arg1, arg2
     case command
-    when "q"
+    when 'q'
       break
-    when "add", "sum", "plus", "+"
+    when 'add', 'sum', 'plus', '+'
       puts arg1 + arg2
-    when "multiply", "product", "*", "times"
+    when 'multiply', 'product', '*', 'times'
       puts arg1 * arg2
-    when "substract", "minus", "difference", "-"
+    when 'substract', 'minus', 'difference', '-'
       puts arg1 - arg2
-    when "divide", "/"
+    when 'divide', '/'
       puts arg1 / arg2
-    else 
+    else
       puts "I don't understand that."
     end
-    puts 
+    puts
   end
-  puts "goodbye"
+  puts 'goodbye'
 end
 
 calculator_v2

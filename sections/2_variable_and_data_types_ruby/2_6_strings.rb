@@ -1,15 +1,17 @@
+# frozen_string_literal: true
+
 # - Combining strings using concatenation + and interpolation #{}
 # - Single quotes don't support interpolation and escape sequences (e.g. `\n')
 # - Using `gets` to get strings from the user, save them to variables, and use them for mad libs.
 
 # ---
 
-#puts "Cheese"
-#funny_joke = "Cheese"
-#puts funny_joke
+# puts "Cheese"
+# funny_joke = "Cheese"
+# puts funny_joke
 
-first_name = "Sebastian"
-last_name= "Pereira"
+first_name = 'Sebastian'
+last_name = 'Pereira'
 
 # print first_name
 # print " "
@@ -17,8 +19,8 @@ last_name= "Pereira"
 
 # Concatenation +
 # puts first_name + " " + last_name
-full_name = first_name + " " + last_name
-yoda_name = last_name + ", " + first_name
+full_name = "#{first_name} #{last_name}"
+yoda_name = "#{last_name}, #{first_name}"
 
 # Interpolation #{} only within double quotes
 greeting = "Hi, my name is #{full_name}"
@@ -40,19 +42,19 @@ puts 'this doesnt goes \n into a new line'
 
 # single quotes only support apostrophe \'
 puts "hi i'm #{full_name}"
-puts 'hi i\'m #{full_name}'
+puts "hi i\'m #{full_name}"
 
-#Mad lib
-puts "Give me a noun."
+# Mad lib
+puts 'Give me a noun.'
 noun = gets.chomp
 
-puts "Give me a verb."
+puts 'Give me a verb.'
 verb = gets.chomp
 
-puts "Give me an adverb"
+puts 'Give me an adverb'
 adverb = gets.chomp
 
-puts "A country?"
+puts 'A country?'
 country = gets.chomp
 
 puts "A verb ending in 'ing'?"

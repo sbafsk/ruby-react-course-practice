@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - We saw that #reduce is basically just a shortcut for a particular way we
 #   might use each, but it's a bit cleaner and saves us a bit of typing.
 # - The standard way to use #reduce is to pass it a block with two block
@@ -26,25 +28,23 @@ end
 
 p total_costs
 
-# 
-
 total_red = costs.reduce do |total, receipt|
   total + receipt
 end
 
 p total_red
 
-p(["There", "Can", "Only", "Be", "One"].inject("") do |str, word|
-  p str, word  
+p(%w[There Can Only Be One].inject('') do |str, word|
+  p str, word
   str << word # .concat
 end)
 
-p [3, 4, 12, 53, 21].inject { |product, n| product * n}
+p [3, 4, 12, 53, 21].inject { |product, n| product * n }
 p [3, 4, 12, 53, 21].inject(:*)
 p [3, 4, 12, 53, 21].reduce(:+)
 
 profits = 100_000 # 100,000 _ is ignored by the interpreter
 
-expenses = [18000, 3000, 5000, 5000]
+expenses = [18_000, 3000, 5000, 5000]
 
 p expenses.reduce(profits, :-)

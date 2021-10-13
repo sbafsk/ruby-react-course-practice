@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Player
-  MOVES = [:rock, :paper, :scissors]
+  MOVES = %i[rock paper scissors].freeze
 
   attr_reader :score, :move, :name
 
@@ -10,16 +12,16 @@ class Player
   end
 
   def get_move
-    loop do 
+    loop do
       puts "Pick a move.\n"
-      puts "> "
+      puts '> '
       @move = gets.chomp.strip.downcase.to_sym
       if @move == :quit
         return false
       elsif MOVES.include?(@move)
         return @move # break loop
       else
-        puts "Invalid move."
+        puts 'Invalid move.'
       end
     end
   end

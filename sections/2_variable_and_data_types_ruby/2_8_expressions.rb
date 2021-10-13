@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 # - If we assign sum=(x+y), and then re-assign x or y, `sum` does not change,
 #   because variables hold objects, not expressions.
-# - Expressions are chunks of code that Ruby evaluates, 
+# - Expressions are chunks of code that Ruby evaluates,
 #   they include objects, and evaluate to an objects.
 # - The Ruby interpreter evaluates expressions in a specific order determined by its order of operations,
 #   but we can make the interpreter evaluate an expressions first by wrapping it in aprentheses ().
@@ -32,10 +34,10 @@ x = 5
 4 + 5
 
 35
-(2 + 
+(2 +
 3)
-#(p ("I'm on two 
-	# lines"))
+# (p ("I'm on two
+# lines"))
 
 # Order of operatios:
 # ( ) Parentheses can override the order of operatios
@@ -44,16 +46,16 @@ x = 5
 # assignment_result = (print_result = (p (23 + 12) * (8 - 9)))
 
 result = (23 + 12 * 8 - 9)
-# p result 
+# p result
 
-first_name = "James"
-last_name = "Bond"
+first_name = 'James'
+last_name = 'Bond'
 
 full_name = first_name + last_name
 
 p full_name
 
-first_name = "Dwayne"
+first_name = 'Dwayne'
 
 p first_name + last_name
 

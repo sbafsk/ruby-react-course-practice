@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - We use true to represent a positive state (true/yes/on) and false to represent a negative state (false/no/off).
 #   There is also nil, which represents an empty state.
 # - We also see boolean values as the return values of comparison operators (==,!=,>,<,>=,<=)
@@ -23,11 +25,11 @@ switch = false
 switch = true
 # false  switch-->  true
 
-fruit = "apple"
-fruit = "banana"
+fruit = 'apple'
+fruit = 'banana'
 fruit = nil
 # p fruit
-#nil => empty state
+# nil => empty state
 
 # comparisons (operators/method)
 # compare two objects, and return true or false
@@ -47,6 +49,6 @@ different = ((3 * 2) != (2 * 3))
 # > , <, >=, <=
 # puts 7 > 3
 # puts 3 < 1
-four_bigger_than_four =  4 > 4
+four_bigger_than_four = 4 > 4
 # puts 4 >= 4
 p four_bigger_than_four

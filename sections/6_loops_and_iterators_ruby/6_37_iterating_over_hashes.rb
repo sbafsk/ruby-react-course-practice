@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - When we call #each on a hash, we pass it a block with two block
 #   variables {|key, value|}
 #   If we want to iterate over just the keys, or just the values, we use
@@ -7,11 +9,11 @@
 #   two block arguments in parentheses like this: {|(key,value), index|}
 
 # ---
-# Iterators can be called on 
+# Iterators can be called on
 # Arrays
 # Ranges
 
-# each 
+# each
 # each_winth_index
 # map
 # reduce/inject
@@ -20,13 +22,13 @@
 # Hashes
 
 sidekicks = {
-  "batman" => "robin",
-  "superman" => "jimmy olsen",
-  "captain america" => "bucky",
-  "conan" => "andy reach",
+  'batman' => 'robin',
+  'superman' => 'jimmy olsen',
+  'captain america' => 'bucky',
+  'conan' => 'andy reach'
 }
 
-#each/each_pair
+# each/each_pair
 sidekicks.each do |hero, sidekick|
   puts "#{sidekick} is the sidekick of #{hero}."
 end
@@ -47,15 +49,15 @@ end
 # since Ruby 1.9, hashes have been ordered
 
 sidekicks.each_with_index do |(hero, sidekick), index|
-  puts "#{index +1 }. #{hero} and #{sidekick} to the rescue!"
+  puts "#{index + 1}. #{hero} and #{sidekick} to the rescue!"
 end
 
 p(sidekicks.select do |hero, sidekick|
-    hero.length > sidekick.length
+  hero.length > sidekick.length
 end)
 
 p(sidekicks.reject do |hero, sidekick|
-    hero.length > sidekick.length
+  hero.length > sidekick.length
 end)
 
 book_names = sidekicks.map do |hero, sidekick|

@@ -1,4 +1,6 @@
-# - We can assign an array index directly with 
+# frozen_string_literal: true
+
+# - We can assign an array index directly with
 #   =, #push (<<) to the end, or #unshift to the front.
 # - We can delete by index with #delete_at, by value with #delete,
 #   from the end with pop, or from the front with shift
@@ -10,19 +12,19 @@
 # Assing an index
 
 bands = []
-bands[0] = "Beatles"
+bands[0] = 'Beatles'
 
 p bands
-bands[3] = "Rolling stones"
-bands[3] = "Led Zepellin"
+bands[3] = 'Rolling stones'
+bands[3] = 'Led Zepellin'
 
 # Add to the end
 # push
 
-bands.push("Salt N Pepa")
+bands.push('Salt N Pepa')
 p bands
 
-bands << "Metallica" << "Destiny"
+bands << 'Metallica' << 'Destiny'
 p bands
 
 # Delete from the end
@@ -47,8 +49,7 @@ shifted = bands.shift
 p bands
 p shifted
 
-
-bands.unshift("Ramones")
+bands.unshift('Ramones')
 p bands
 
 # Delete by index
@@ -60,17 +61,16 @@ bands.delete(nil) # every nil
 p bands
 
 # Insert a value at index
-bands.insert(1, "Gorillaz")
+bands.insert(1, 'Gorillaz')
 p bands
 
 p container
 
 p bands + container
 
-container << "The strokes"
+container << 'The strokes'
 
 # bands << container
 bands.concat(container)
-
 
 p bands

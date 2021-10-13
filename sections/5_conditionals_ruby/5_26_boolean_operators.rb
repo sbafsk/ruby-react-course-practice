@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - We have two boolean values (true, false), and there
 #   boolean operators(NOT !, OR ||, AND &&)
 # - We saw that ! reverses the truth value of a boolean, so
@@ -18,28 +20,28 @@ false
 
 puts true
 puts !true
-puts !!true
+puts !true.nil?
 
-puts 
+puts
 
 puts false
 puts !false
-puts !!false
+puts !false.nil?
 
 # Logical Negation
 # Flip the value of true or false to the other one.
 
 # like negations with numbers :
 puts 7
-puts -7
-puts --7
+puts(-7)
+puts(--7)
 
 # Conditionals with Not:
 
 raining = true
 
-if !raining 
+if !raining
   puts "ok, i'll come to the beach"
 else
-  puts "no way"
+  puts 'no way'
 end

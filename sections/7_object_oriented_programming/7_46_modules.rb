@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # - Modules let us handle overlapping categories. For example, an
 #   Electriccar is a type of Car, and ElectricScooter is a type of
 #   Motorcycle, but they are both Electric. So maybe Electric is a module.
@@ -12,19 +14,19 @@
 
 class Engineer
   def do_math
-    puts "numbers!"
+    puts 'numbers!'
   end
 end
 
 class Designer
   def make_pretty
-    puts "looks nicer"
+    puts 'looks nicer'
   end
 end
 
 module ManagementTraining
   def yelling
-    puts "GET BACK TO WORK"
+    puts 'GET BACK TO WORK'
   end
 end
 # we can't instance a module
@@ -46,7 +48,6 @@ class LeadDesigner < Designer
   include ManagementTraining
 end
 
-
 lead_eng = LeadEngineer.new
 lead_des = LeadDesigner.new
 
@@ -57,9 +58,8 @@ lead_des.yelling
 
 p(lead_eng.class.ancestors)
 
-
 # Methods in disguise?
 
 # Kernel.puts("hello")
 
-puts("hello") # Kernel module is included in object
+puts('hello') # Kernel module is included in object

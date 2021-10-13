@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 # - We saw that the Array class defines a neat method, #product,
 #   which makes it easy to generate all the possible pairings
 #   between two sets of objects.
 # - We saw how one kind of objects(Dealer) can HAVE another kind of
-#   object (Deck). This is called composition, and a commin desing 
+#   object (Deck). This is called composition, and a commin desing
 #   guideline stresse using "composition over ingeritance"
-# - We looked at how to make method private, which means they 
+# - We looked at how to make method private, which means they
 #   can only be called WITHOUT and explicit receiver
 #   (even if the receiver is self)
 
 class Deck
-  SUITS = ['s','h', 'd', 'c']
-  VALUES = (2..10).map(&:to_s).concat ['J', 'Q', 'K', 'A']
+  SUITS = %w[s h d c].freeze
+  VALUES = (2..10).map(&:to_s).concat %w[J Q K A]
 
   def initialize
     @stack = generate_stack
@@ -34,10 +36,8 @@ class Deck
     #     stack << value + suit
     #   end
     # end
-    #stack
+    # stack
   end
-
-
 end
 
 class Player
@@ -61,7 +61,6 @@ class Player
 end
 
 class Dealer
-
   def initialize
     @deck = Deck.new
   end
@@ -85,14 +84,11 @@ class Dealer
   def bad_method
     @deck = Deck.generate_stack
   end
-
 end
 
 dealer = Dealer.new
 tara = Player.new
 dustin = Player.new
-
-
 
 dealer.shuffle_deck
 dealer.burn_card

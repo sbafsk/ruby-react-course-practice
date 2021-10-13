@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 # - Map keys representing people or things to an associated value
 #   for each OR we can have a hash which represents a person (or thing)
-#   and multiple key/value pairs representing different kinds of 
+#   and multiple key/value pairs representing different kinds of
 #   information about that person.
 # - We can nest Hashes inside arrays or vice versa, so we can have
 #   a list of contacts, each of which is a hash.
@@ -16,45 +18,45 @@
 #  of information about them
 
 prices = {
-	"eggs" => 3.0,
-	"milk" => 2.0,
-	"bacon" => 5.0
+  'eggs' => 3.0,
+  'milk' => 2.0,
+  'bacon' => 5.0
 }
 
-p prices["eggs"]
+p prices['eggs']
 
 # Multiple fields of information about one person or thing
 
 my_info = {
-	"name" => "Seba",
-	"job" => "Engineer",
-	"likes it?" => true,
-	"age" => 28
+  'name' => 'Seba',
+  'job' => 'Engineer',
+  'likes it?' => true,
+  'age' => 28
 }
 
-puts "I am #{my_info["age"]} years old"
+puts "I am #{my_info['age']} years old"
 
 # Use symbols for keys (when it makes sense)
 # name symbols like variables (snake_case)
 
 contact_card = {
-	:name => "Bruce Wayne",
-	:email_address => "batman@batman.com",
-	:friends => ["Juan", "Jose", "Pedro"]
+  name: 'Bruce Wayne',
+  email_address: 'batman@batman.com',
+  friends: %w[Juan Jose Pedro]
 }
 
-contact_card.default = "Info not found."
+contact_card.default = 'Info not found.'
 
 p contact_card[:name]
-p contact_card["email_address".to_sym]
+p contact_card['email_address'.to_sym]
 
 # trying to access with a key that's not defined
 #  returns default value (nil)
 
 # Alternate syntax
 contact_card_2 = {
-	name: "Alfred",
-	email_address: "alf@batman.com"	
+  name: 'Alfred',
+  email_address: 'alf@batman.com'
 }
 
 p contact_card_2[:name]
